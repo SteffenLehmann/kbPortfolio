@@ -1,0 +1,28 @@
+.layout div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50vw;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.layout div h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.layout div p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.layout div a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.layout div a:hover {
+  text-decoration: underline;
+}
