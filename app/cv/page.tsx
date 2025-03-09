@@ -5,8 +5,8 @@ export default function CV() {
   return (
     <div className={styles.cv}>
       <header>
-        <h1>Kirstine Bjørn</h1>
-        <p>Marketing Coordinator | Sales & Marketing Intern</p>
+        <h1 style={{textAlign: 'center'}}>Kirstine Bjørn</h1>
+        <p style={{textAlign: 'center'}}>Marketing Coordinator | Sales & Marketing Intern</p>
       </header>
       <div className={styles['skills-container']}>
         <h2>Skills</h2>
@@ -57,13 +57,13 @@ export default function CV() {
           </ul>
         </div>
       </div>
-      <section>
+      <div className={styles['experience-container']}>
         <h2>Education</h2>
         <h3>Aalborg University</h3>
         <p>Master of Arts (MA), Culture, Communication, and Globalization | 2021 - 2023</p>
         <h3>Aalborg University</h3>
         <p>Bachelor's Degree, Language and International Studies, Spanish | Sep 2016 - Jun 2019</p>
-      </section>
+      </div>
     </div>
   );
 }
