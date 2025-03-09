@@ -1,7 +1,11 @@
+import { getNewestPost } from "@/lib/posts";
+import Link from "next/link";
+import Image from 'next/image';
 
-export default function Home() {
+export default async function Home() {
+  const post = await getNewestPost();
   return (
-    <div >
+    <div>
       <main>
         <section>
           <h1>Kirstine Bjørn</h1>
@@ -14,10 +18,27 @@ export default function Home() {
         </section>
         <section>
           <h2>Seneste Indlæg</h2>
-          <p> This will get change later when the blog is ready</p>
-          <p>
-            <a href="/blog">Læs mine seneste indlæg</a>
-          </p>
+          {post ? (
+            <div>
+              <Link href={`/blog/${post.slug}`}>
+                {post.title}
+              </Link>
+              <span>{post.description}</span>
+              {post.image && (
+                <div>
+                  <Image
+                    src={post.image}        // Image source (path or URL)
+                    alt={post.title}        // Alt text for the image
+                    layout="responsive"     // Make the image responsive
+                    width={800}             // Width of the image
+                    height={400}            // Height of the image
+                  />
+                </div>
+              )}
+            </div>
+          ) : (
+            <p>No posts available</p>
+          )}
         </section>
       </main>
     </div>

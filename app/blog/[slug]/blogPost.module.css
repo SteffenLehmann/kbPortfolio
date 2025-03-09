@@ -1,0 +1,14 @@
+.blogPost img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blogPost p {
+  font-size: 1rem !important;
+  text-transform: none !important;
+}
+
+.blogPost div {
+  padding: 0% !important;
+}
